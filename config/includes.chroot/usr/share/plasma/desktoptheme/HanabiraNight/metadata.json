@@ -1,0 +1,8 @@
+{
+  "KPlugin": {
+    "Id": "HanabiraNight",
+    "Name": "Hanabira Night",
+    "Description": "Hanabira Plasma style with Breeze assets and custom color system",
+    "License": "MIT"
+  }
+}

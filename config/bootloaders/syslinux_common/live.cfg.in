@@ -1,0 +1,12 @@
+label hanabira-@FLAVOUR@
+    menu label ^Start Hanabira OS
+    menu default
+    linux @LINUX@
+    initrd @INITRD@
+    append @APPEND_LIVE@
+
+label hanabira-@FLAVOUR@-safe
+    menu label Hanabira OS (safe mode)
+    linux @LINUX@
+    initrd @INITRD@
+    append @APPEND_LIVE_FAILSAFE@

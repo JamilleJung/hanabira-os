@@ -1,0 +1,10 @@
+[package]
+name = "hanabira-core"
+version = "0.1.0"
+edition = "2021"
+license = "MIT"
+description = "Hanabira motion primitives and measured frame-time analysis"
+
+[[bin]]
+name = "hanabira-perf"
+path = "src/main.rs"

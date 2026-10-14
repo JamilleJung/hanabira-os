@@ -1,0 +1,9 @@
+{
+  "KPackageStructure": "Plasma/LookAndFeel",
+  "KPlugin": {
+    "Id": "org.hanabira.night",
+    "Name": "Hanabira · Night",
+    "Description": "Velvet plum evenings and soft sakura light",
+    "License": "MIT"
+  }
+}

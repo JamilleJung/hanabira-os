@@ -1,0 +1,27 @@
+name: Source checks
+
+on:
+  push:
+  pull_request:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  static:
+    runs-on: ubuntu-24.04
+    steps:
+      - uses: actions/checkout@v4
+      - name: Install shellcheck
+        run: sudo apt-get update && sudo apt-get install -y shellcheck
+      - name: Check source tree
+        run: ./scripts/check-source.sh
+      - name: Lint shell scripts
+        run: shellcheck scripts/*.sh auto/config
+  motion-and-metrics:
+    runs-on: ubuntu-24.04
+    steps:
+      - uses: actions/checkout@v4
+      - name: Test frame-rate independence and capture analysis
+        run: cargo test --locked --manifest-path desktop/core/Cargo.toml

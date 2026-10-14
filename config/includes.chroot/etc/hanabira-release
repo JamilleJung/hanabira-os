@@ -1,0 +1,3 @@
+NAME="Hanabira OS Preview"
+BASE="Debian GNU/Linux 13 (trixie)"
+VARIANT="Live"

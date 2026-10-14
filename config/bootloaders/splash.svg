@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="640" height="480" viewBox="0 0 640 480">
+  <defs>
+    <linearGradient id="sky" x1="0" y1="0" x2="0.9" y2="1">
+      <stop offset="0" stop-color="#f9e9e7"/>
+      <stop offset="0.57" stop-color="#e7cadc"/>
+      <stop offset="1" stop-color="#bda9cf"/>
+    </linearGradient>
+    <linearGradient id="petal" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#eaa8c1"/>
+      <stop offset="1" stop-color="#c86995"/>
+    </linearGradient>
+  </defs>
+
+  <rect width="640" height="480" fill="url(#sky)"/>
+  <circle cx="563" cy="67" r="115" fill="#fff7f0" opacity="0.46"/>
+  <path d="M459 0c34 33 58 49 91 66 30 16 59 26 90 29" fill="none" stroke="#ae7899" stroke-width="2" opacity="0.42"/>
+
+  <g fill="url(#petal)">
+    <g transform="translate(78 88)">
+      <ellipse cy="-17" rx="8" ry="17"/>
+      <ellipse cy="-17" rx="8" ry="17" transform="rotate(72)"/>
+      <ellipse cy="-17" rx="8" ry="17" transform="rotate(144)"/>
+      <ellipse cy="-17" rx="8" ry="17" transform="rotate(216)"/>
+      <ellipse cy="-17" rx="8" ry="17" transform="rotate(288)"/>
+      <circle r="6" fill="#f4d5a3"/>
+    </g>
+    <g transform="translate(552 70) scale(0.72)" opacity="0.66">
+      <ellipse cy="-17" rx="8" ry="17"/>
+      <ellipse cy="-17" rx="8" ry="17" transform="rotate(72)"/>
+      <ellipse cy="-17" rx="8" ry="17" transform="rotate(144)"/>
+      <ellipse cy="-17" rx="8" ry="17" transform="rotate(216)"/>
+      <ellipse cy="-17" rx="8" ry="17" transform="rotate(288)"/>
+      <circle r="6" fill="#f4d5a3"/>
+    </g>
+  </g>
+
+  <path d="M529 120c6-8 11-8 16 1-4 8-9 10-16-1ZM593 145c9-4 13-3 14 7-7 6-12 6-14-7ZM482 59c7-6 11-5 14 4-5 7-10 8-14-4Z" fill="#ba7198" opacity="0.52"/>
+  <text x="119" y="84" fill="#3b2741" font-family="DejaVu Sans, sans-serif" font-size="34" font-weight="700" letter-spacing="2">HANABIRA</text>
+  <text x="122" y="108" fill="#76546f" font-family="DejaVu Sans, sans-serif" font-size="13" font-weight="700" letter-spacing="7">OS</text>
+  <path d="M48 141h544" stroke="#a46990" stroke-width="1.5" opacity="0.68"/>
+
+  <rect x="24" y="180" width="592" height="276" rx="22" fill="#281d34" opacity="0.96"/>
+  <rect x="24.75" y="180.75" width="590.5" height="274.5" rx="21.25" fill="none" stroke="#bd83a7" stroke-width="1.5" opacity="0.76"/>
+  <path d="M42 183h95" stroke="#e8a5c3" stroke-width="3" stroke-linecap="round"/>
+  <path d="M503 427h80" stroke="#bb7a9f" stroke-width="1.5" opacity="0.68"/>
+</svg>

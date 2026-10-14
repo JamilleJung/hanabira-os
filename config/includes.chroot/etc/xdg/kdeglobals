@@ -1,0 +1,17 @@
+[KDE]
+LookAndFeelPackage=org.hanabira.day
+widgetStyle=Breeze
+
+[General]
+ColorScheme=HanabiraDay
+font=Prompt,10,-1,5,57,0,0,0,0,0
+fixed=Noto Sans Mono,10,-1,5,50,0,0,0,0,0
+menuFont=Prompt,10,-1,5,57,0,0,0,0,0
+smallestReadableFont=Prompt,9,-1,5,57,0,0,0,0,0
+toolBarFont=Prompt,10,-1,5,57,0,0,0,0,0
+
+[Icons]
+Theme=HanabiraDay
+
+[WM]
+activeFont=Prompt,10,-1,5,57,0,0,0,0,0

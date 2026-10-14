@@ -1,0 +1,19 @@
+[Icon Theme]
+Name=Hanabira Day
+Comment=Original pastel blossom icons for Hanabira OS
+Inherits=breeze,breeze-dark,hicolor
+Directories=scalable/apps,scalable/places
+
+[scalable/apps]
+Size=48
+Type=Scalable
+MinSize=16
+MaxSize=256
+Context=Applications
+
+[scalable/places]
+Size=48
+Type=Scalable
+MinSize=16
+MaxSize=256
+Context=Places

@@ -1,0 +1,4 @@
+*.png binary
+*.ttf binary
+*-OFL.txt -whitespace
+docs/SPECIFICATION.md -whitespace

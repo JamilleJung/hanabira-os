@@ -1,0 +1,28 @@
+desktop-image: "../splash.png"
+title-text: ""
+terminal-font: "Unifont Regular 16"
+message-font: "Unifont Regular 16"
+
++ boot_menu {
+    left = 10%
+    width = 80%
+    top = 49%
+    height = 40%
+    item_font = "Unifont Regular 16"
+    item_color = "#ead9e7"
+    selected_item_font = "Unifont Regular 16"
+    selected_item_color = "#ffffff"
+    item_height = 22
+    item_spacing = 7
+    item_padding = 6
+}
+
++ progress_bar {
+    id = "__timeout__"
+    left = 12%
+    width = 76%
+    top = 93%
+    height = 8
+    fg_color = "#d28eae"
+    bg_color = "#55415b"
+}

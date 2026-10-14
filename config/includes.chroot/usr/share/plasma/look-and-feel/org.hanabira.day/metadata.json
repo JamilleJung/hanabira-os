@@ -1,0 +1,9 @@
+{
+  "KPackageStructure": "Plasma/LookAndFeel",
+  "KPlugin": {
+    "Id": "org.hanabira.day",
+    "Name": "Hanabira · Day",
+    "Description": "Warm sakura light, plum ink and a focused floating desktop",
+    "License": "MIT"
+  }
+}

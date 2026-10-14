@@ -1,0 +1,13 @@
+[KDE]
+AnimationDurationFactor=0.9
+
+[Plugins]
+blurEnabled=true
+wobblywindowsEnabled=true
+magiclampEnabled=true
+
+[Effect-wobblywindows]
+Settings=Auto
+WobblynessLevel=0
+MoveWobble=true
+ResizeWobble=false
