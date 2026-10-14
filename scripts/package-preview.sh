@@ -15,20 +15,28 @@ recipe=hanabira-live-build-recipe.tar.gz
 # This contains our build recipe and artwork, not all Debian package sources.
 tar -czf "$recipe" \
     --exclude='config/package-lists/live.list.chroot' \
+    --exclude='*/target' --exclude='*/build' --exclude='*/.build' \
+    --exclude='packaging/out' --exclude='*/.git' \
     --transform='s,^,hanabira-os/,' \
     auto/config config/bootloaders config/includes.chroot config/package-lists \
-    scripts docs .github README.md PREVIEW-TH.md CHANGELOG.md CONTRIBUTING.md ASSETS.md \
-    LICENSE VERSION .gitignore
+    desktop packaging installer scripts docs .github README.md PREVIEW-TH.md \
+    CHANGELOG.md CONTRIBUTING.md ASSETS.md LICENSE VERSION .gitignore .gitattributes
 
 version=$(< VERSION)
 commit=unavailable
+source_state=unavailable
 if command -v git >/dev/null 2>&1 && git -c "safe.directory=$project_dir" rev-parse --verify HEAD >/dev/null 2>&1; then
     commit=$(git -c "safe.directory=$project_dir" rev-parse HEAD)
+    source_state=clean
+    if [[ -n $(git -c "safe.directory=$project_dir" status --porcelain --untracked-files=normal) ]]; then
+        source_state=dirty
+    fi
 fi
 {
     printf 'Project: Hanabira OS\n'
     printf 'Version: %s\n' "$version"
     printf 'Git commit: %s\n' "$commit"
+    printf 'Source tree: %s\n' "$source_state"
     printf 'Built (UTC): %s\n' "$(date -u +%Y-%m-%dT%H:%M:%SZ)"
     printf 'Build suite: Debian 13 (trixie)\n'
     printf 'Architecture: amd64\n'

@@ -1,0 +1,11 @@
+[Desktop Entry]
+Type=Application
+Version=1.0
+Name=Install Hanabira OS
+GenericName=System Installer
+Comment=Install Hanabira OS onto a selected disk
+Exec=/usr/bin/hanabira-installer
+Icon=hanabira-launcher
+Terminal=false
+Categories=System;
+StartupNotify=true

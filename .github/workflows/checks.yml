@@ -25,3 +25,12 @@ jobs:
       - uses: actions/checkout@v4
       - name: Test frame-rate independence and capture analysis
         run: cargo test --locked --manifest-path desktop/core/Cargo.toml
+  debian-packages:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 30
+    steps:
+      - uses: actions/checkout@v4
+      - name: Install container runtime
+        run: sudo apt-get update && sudo apt-get install -y podman
+      - name: Compile native components against Debian 13
+        run: ./scripts/build-packages.sh all

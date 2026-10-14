@@ -1,0 +1,40 @@
+#!/bin/sh
+set -eu
+
+config_dir=/etc/hanabira/calamares
+branding_dir=/etc/calamares/branding/hanabira
+
+if [ "${1:-}" = "--check" ]; then
+    test -f "$config_dir/settings.conf"
+    test -f "$branding_dir/branding.desc"
+    command -v calamares >/dev/null 2>&1
+    echo "Hanabira Calamares configuration and backend found."
+    exit 0
+fi
+
+if [ "$#" -ne 0 ]; then
+    echo "Usage: hanabira-installer [--check]" >&2
+    exit 2
+fi
+
+# Partitioning is intentionally unavailable outside a booted live image.
+if [ ! -f /run/live/medium/live/filesystem.squashfs ] && \
+   [ ! -f /lib/live/mount/medium/live/filesystem.squashfs ]; then
+    echo "Hanabira Installer only runs from Hanabira live media." >&2
+    exit 1
+fi
+
+if [ -z "${DISPLAY:-}" ]; then
+    echo "Calamares currently needs an X11/XWayland display; use Plasma rescue." >&2
+    exit 1
+fi
+
+if [ "$(id -u)" -eq 0 ]; then
+    exec /usr/bin/calamares --config "$config_dir"
+fi
+
+# Match Debian's Calamares launcher: grant only local root access to the
+# current X server, then revoke it when the installer exits.
+xhost +si:localuser:root >/dev/null
+trap 'xhost -si:localuser:root >/dev/null 2>&1 || true' EXIT HUP INT TERM
+pkexec /usr/bin/calamares --config "$config_dir"

@@ -1,0 +1,21 @@
+[package]
+name = "hanabira-compositor"
+version = "0.1.0"
+edition = "2021"
+license = "MIT"
+description = "Hanabira Desktop Environment Wayland compositor"
+
+[dependencies]
+bitflags = "2.6"
+calloop = "=0.14.2"
+tracing = "0.1"
+tracing-subscriber = { version = "0.3", features = ["env-filter"] }
+wayland-protocols = "=0.32.8"
+png = "=0.17.16"
+smithay = { version = "=0.7.0", default-features = false, features = [
+    "backend_winit",
+    "wayland_frontend",
+    "desktop",
+    "use_system_lib",
+    "backend_drm",
+] }

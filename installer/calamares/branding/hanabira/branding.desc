@@ -1,0 +1,37 @@
+---
+componentName: hanabira
+welcomeStyleCalamares: true
+welcomeExpandingLogo: false
+windowExpanding: normal
+windowSize: 940px,620px
+windowPlacement: center
+
+strings:
+    productName: Hanabira OS
+    shortProductName: Hanabira
+    version: "0.1"
+    shortVersion: "0.1"
+    versionedName: Hanabira OS 0.1 Preview
+    shortVersionedName: Hanabira 0.1
+    bootloaderEntryName: Hanabira OS
+    productUrl: https://github.com/JamilleJung/hanabira-os
+    supportUrl: https://github.com/JamilleJung/hanabira-os/issues
+    knownIssuesUrl: https://github.com/JamilleJung/hanabira-os/issues
+    releaseNotesUrl: https://github.com/JamilleJung/hanabira-os/releases
+
+sidebar: widget
+navigation: widget
+
+images:
+    productLogo: logo.png
+    productIcon: logo.png
+    productWelcome: welcome.png
+
+slideshow: show.qml
+slideshowAPI: 2
+
+style:
+    SidebarBackground: "#231c35"
+    SidebarText: "#f7eef5"
+    SidebarTextCurrent: "#ffffff"
+    SidebarBackgroundCurrent: "#70446f"

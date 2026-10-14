@@ -29,7 +29,26 @@ separate, tested driver path before this image is recommended for those GPUs.
 
 ## Build a local preview
 
-Use a Debian 13 VM with enough free storage for the chroot and ISO. Install
+The full build entry point is:
+
+```sh
+./scripts/build-iso.sh
+```
+
+It compiles five native packages in Debian 13, stages them into live-build and
+verifies the resulting ISO. The current HDE backend runs nested; the live
+image starts Plasma rescue for physical display ownership. Run
+`hanabira-session` from that session to try HDE. Native DRM/KMS remains pending.
+The Calamares integration has passed a UI smoke test, but disk installation
+and installed boot remain unverified until their VM acceptance tests pass.
+
+![Sakura Dream shell](docs/screenshots/sakura-dream.png)
+
+The gallery is captured from the native Qt shell in offscreen visual QA mode,
+not an installed-system screenshot. Real nested Smithay + shell + Wayland app
+rendering has also been tested. Details are in [docs/TEST_RESULTS.md](docs/TEST_RESULTS.md).
+
+For the lower-level live-build stage only, use a Debian 13 VM with enough free storage for the chroot and ISO. Install
 `live-build`, `debootstrap`, `xorriso`, `squashfs-tools`, `syslinux`,
 `grub-pc-bin`, `grub-efi-amd64-bin`, `mtools`, `dosfstools`, and
 `ca-certificates`, then run:

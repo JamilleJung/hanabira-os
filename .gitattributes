@@ -2,3 +2,4 @@
 *.ttf binary
 *-OFL.txt -whitespace
 docs/SPECIFICATION.md -whitespace
+desktop/compositor/third-party-notices/LICENSES.txt -whitespace

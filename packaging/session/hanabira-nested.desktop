@@ -1,0 +1,7 @@
+[Desktop Entry]
+Name=Hanabira Desktop (experimental nested)
+Comment=Hanabira shell running in a parent X11 display
+Exec=/usr/bin/hanabira-session
+TryExec=/usr/bin/hanabira-compositor
+Type=Application
+DesktopNames=Hanabira

@@ -1,0 +1,7 @@
+[Desktop Entry]
+Name=Hanabira Rescue (Plasma)
+Comment=Known-working Plasma Wayland session for recovery
+Exec=/usr/bin/startplasma-wayland
+TryExec=/usr/bin/startplasma-wayland
+Type=Application
+DesktopNames=KDE

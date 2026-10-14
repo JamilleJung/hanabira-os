@@ -6,6 +6,8 @@ to the extent copyright or similar rights subsist in them:
 
 | Asset | Origin | Credit |
 | --- | --- | --- |
+| `desktop/shell/assets/celestial-blue.svg` and `.png` | Original procedural vector scene and its raster rendering | Hanabira OS contributors |
+| `installer/calamares/branding/hanabira/` | Original Hanabira UI and logo treatment; Debian Calamares backend remains separately licensed | Hanabira OS contributors |
 | `config/includes.chroot/usr/share/wallpapers/Hanabira/contents/images/*.png` | Generated for this project at the project initiator's request using OpenAI image generation; responsive crops were made for the live image | Hanabira OS contributors |
 | `config/includes.chroot/usr/share/wallpapers/Hanabira/contents/images_dark/*.png` | Generated for this project at the project initiator's request using OpenAI image generation; responsive crops were made for the live image | Hanabira OS contributors |
 | `config/bootloaders/splash.svg` | Original vector artwork made for this project | Hanabira OS contributors |
